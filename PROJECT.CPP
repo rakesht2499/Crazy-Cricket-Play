@@ -1,0 +1,206 @@
+#include<iostream.h>
+#include<conio.h>
+#include<ctype.h>
+#include<stdlib.h>
+#include<dos.h>
+void main()
+{
+clrscr();
+int a,b,c=0,i,ch3,ch2;
+char choice;
+cout<<"\t\t***WELCOME TO THE WORLD OF CRAZY CRICKET PLAY(CCP)***";
+cout<<"\n     \t\t                   __                ____  ____  ";
+cout<<"\n \t\t  00             / /               ||    ||    ||";
+cout<<"\n\t\t 0000       __ / /__               ||    ||    ||";
+cout<<"\n\t\t  00      /        /               ||    ||    ||";
+cout<<"\n \t\t        /        /                 ||    ||    ||";
+cout<<"\n \t\t      /        /                   ||    ||    ||";
+cout<<"\n \t\t    /        /	                   ||    ||    ||";
+cout<<"\n \t\t  /        /                       ||    ||    || ";
+cout<<"\n\t\t/________/                         ||    ||    || ";
+cout<<"\n\n \t\t\t\t  ---          -    -";
+cout<<"\n \t\t\t\t ||  ||           -  ||";
+cout<<"\n   \t\t\t\t ||  ||        OO   ||	";
+cout<<"\n    \t\t\t\t ||   ||      OOOO ||	";
+cout<<"\n    \t\t\t\t ||    ||      OO ||	";
+cout<<"\n    \t\t\t\t ||     ||       ||	";
+cout<<"\n    \t\t\t\t ||     ||      ||	";
+cout<<"\n    \t\t\t\t ||      ||    ||	";
+for(i=0;;i++)
+{
+cout<<"\n\t\t******1-PLAY******\t\t*****2-HOW TO PLAY*****\n\t\t\t\t  ******3-EXIT******\nPlease enter the correct option.If you enter wrong number you will be out of the game.\nEnter here:\n";
+cin>>choice;
+if((isalnum(choice)==0)||(isalnum(choice)==8))
+{
+cout<<"Please enter the correct option";
+continue;
+}
+else
+break;
+}
+switch(choice)
+  {
+  case '1':
+    {
+    clrscr();
+    cout<<"\n\n\t\tHERE GOES IN\n";
+      for(i=0;i<10;i++)
+	{
+	delay(100);cout<<"3\t";
+	}
+      cout<<"\n";
+      for(i=0;i<10;i++)
+	{
+	delay(100);cout<<"2\t";
+	}
+       cout<<"\n";
+      for(i=0;i<10;i++)
+	{
+	delay(100);cout<<"1\t";
+	}
+      }
+  randomize;
+  for(i=0;;i++)
+    {
+    cout<<"\n\nENTER YOUR CRAZY NUMBER-";
+    cin>>a;
+    if(a>6 || a<0)
+      {
+      cout<<"\ngetting score more than 6 is not possible in our CCP.....";
+      continue;
+      }
+    if(a==0)
+    {
+    cout<<"DOT ball is nt possible in the game...plse do read the instructions";
+    continue;
+    }
+    cout<<"\nCOMPUTER'S SCORE-";
+    b=random(a+1);
+    cout<<b;
+    if(b==a)
+     {
+     cout<<"\n	  ---          -    -";
+     cout<<"\n	||  ||	        -  ||";
+     cout<<"\n	||  ||	     OO   ||	";
+     cout<<"\n	||   ||	    OOOO ||	";
+     cout<<"\n	||    ||     OO ||	";
+     cout<<"\n	||     ||      ||	";
+     cout<<"\n	||     ||     ||	";
+     cout<<"\n	||      ||   ||	";
+     cout<<"\n\n\t\t\t*****OUT*****";
+     delay(5000);
+     exit(0);
+     }
+    else
+     {
+     c=c+a;
+     cout<<"\nyour present score is -"<<c;
+     if(i==8)
+     cout<<"\n\ngood going\n";
+     if(i==16)
+     cout<<"\n\nkeep on trying....nvr lve it\n";
+     }
+    }
+case '2':
+      {
+      clrscr();
+      cout<<"\n\n\t\t*****WELCOME TO THE WORLD OF INSTRUCTIONS*****";
+      delay(500);
+      cout<<"\n\nWHAT'S THE GAME IS ALL ABOUT:-";
+      delay(500);
+      cout<<"\n1) This game is nothing but a number play which is closely related to cricket.";
+      delay(5000);
+      cout<<"\n2) In this game you will be playing the game with computer as your opponent.";
+      delay(5000);
+      cout<<"\n3) The player should enter a number between 1-6(because in cricket generally the max. run which can be scored is 6).";
+      delay(5000);
+      cout<<"\n4) In CCP, giving no. greater than 6 isd not possible.";
+      delay(5000);
+      cout<<"\n5) Then the computer will be giving a number.";
+      delay(5000);
+      cout<<"\n6) If the number given by the computer is eual to the number which the player have entered, then the player will be declared as OUT.";
+      delay(5000);
+      cout<<"\n7) If not, you will be continuing the game.";
+      delay(5000);
+      cout<<"\n8) Last but not the least, please dont try to cheat.";
+      delay(5000);
+      cout<<"\n9) We hope you will enjoy playing CCP.";
+      delay(5000);
+      cout<<"\n\n\t*****1)PLAY*****\t\t*****2)EXIT*****";
+      cin>>ch3;
+      if(ch3==2)
+	{
+	cout<<"\n\n\t\t\\\\\*****THANK YOU*****/////";
+	delay(5000);exit(0);
+	}
+      else
+      {
+      clrscr();
+      cout<<"\n\n\t\tHERE GOES IN\n";
+      for(i=0;i<10;i++)
+	{
+	delay(100);cout<<"3\t";
+	}
+      cout<<"\n";
+      for(i=0;i<10;i++)
+	{
+	delay(100);cout<<"2\t";
+	}
+       cout<<"\n";
+      for(i=0;i<10;i++)
+	{
+	delay(100);cout<<"1\t";
+	}
+	randomize;
+  for(int i=0;;i++)
+    {
+    cout<<"\n\nENTER YOUR CRAZY NUMBER-";
+    cin>>a;
+    if(a>6 || a<0)
+      {
+      cout<<"\nGetting score more than 6 is not possible in our CCP.....";
+      continue;
+      }
+    if(a==0)
+    {
+    cout<<"DOT ball is nt possible in the game...plse do read the instructions";
+    continue;
+    }
+    cout<<"\nCOMPUTER'S SCORE-";
+    b=random(a+1);
+    cout<<b;
+    if(b==a)
+     {
+     cout<<"\n\n\t\t\t*****OUT*****";
+     cout<<"\n	  ---          -    -";
+     cout<<"\n	||  ||	        -  ||";
+     cout<<"\n	||  ||	     OO   ||	";
+     cout<<"\n	||   ||	    OOOO ||	";
+     cout<<"\n	||    ||     OO ||	";
+     cout<<"\n	||     ||      ||	";
+     cout<<"\n	||     ||     ||	";
+     cout<<"\n	||      ||   ||	";
+     delay(5000);
+     exit(0);
+     }
+    else
+     {
+     c=c+a;
+     cout<<"\nyour present score is -"<<c;
+     if(i==8)
+     cout<<"\n\ngood going\n";
+     if(i==16)
+     cout<<"\n\nkeep on trying....nvr lve it\n";
+     }
+    }
+   }
+case '3':
+  {
+  cout<<"\n\t\t\\\\\*****THANK YOU*****/////";
+  delay(5000);
+  exit(0);
+  }
+}
+getch();
+}
+}
